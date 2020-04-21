@@ -37,3 +37,17 @@ code {
 .links li {
   cursor: pointer;
 }
+
+form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+form input {
+  margin: 1%;
+}
+
+form button {
+  margin: 1%;
+}
