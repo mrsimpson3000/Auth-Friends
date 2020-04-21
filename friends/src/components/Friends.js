@@ -40,12 +40,6 @@ export default function Friends() {
 
   return (
     <>
-      <Row>
-        {/* {console.log(friends)} */}
-        {friends.map((friend, index) => {
-          return <FriendCard friend={friend} key={index} />;
-        })}
-      </Row>
       <Row className='pt-5 pb-5'>
         <Col sm={12} md={{ size: 6, offset: 3 }}>
           <Form onSubmit={handleSubmit} className='bg-primary p-4'>
@@ -85,6 +79,12 @@ export default function Friends() {
             <Button color='secondary'>Add New Friend</Button>
           </Form>
         </Col>
+      </Row>
+      <Row>
+        {/* {console.log(friends)} */}
+        {friends.map((friend, index) => {
+          return <FriendCard friend={friend} key={index} />;
+        })}
       </Row>
     </>
   );
