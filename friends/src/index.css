@@ -38,16 +38,16 @@ code {
   cursor: pointer;
 }
 
-form {
+.loginForm {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-form input {
+.loginForm input {
   margin: 1%;
 }
 
-form button {
+.loginForm button {
   margin: 1%;
 }

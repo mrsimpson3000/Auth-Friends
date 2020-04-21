@@ -32,7 +32,7 @@ export default function Login(props) {
   };
   return (
     <>
-      <form onSubmit={login}>
+      <form className='loginForm' onSubmit={login}>
         <input
           type='text'
           name='username'

@@ -82,7 +82,7 @@ export default function Friends() {
                 required
               />
             </FormGroup>
-            <Button color='primary'>Add New Friend</Button>
+            <Button color='secondary'>Add New Friend</Button>
           </Form>
         </Col>
       </Row>
