@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { axiosWithAuth } from "../utils/axiosAuth";
 
-export default function Login() {
+export default function Login(props) {
   const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -24,7 +24,7 @@ export default function Login() {
       .then((result) => {
         console.log(result);
         localStorage.setItem("token", result.data.payload);
-        // history.pushState("/protected");
+        props.history.pushState("/protected");
       })
       .catch((error) => {
         console.log(error);
