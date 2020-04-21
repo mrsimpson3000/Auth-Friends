@@ -13,15 +13,18 @@ export default function Login() {
       ...credentials,
       [event.target.name]: event.target.value,
     });
+    console.log(event.target.value);
   };
 
   const login = (event) => {
-    event.preventdefault();
+    event.preventDefault();
 
     axiosWithAuth()
       .post("/api/login", credentials)
       .then((result) => {
         console.log(result);
+        localStorage.setItem("token", result.data.payload);
+        // history.pushState("/protected");
       })
       .catch((error) => {
         console.log(error);

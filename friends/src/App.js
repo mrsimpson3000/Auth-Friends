@@ -1,16 +1,26 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-import Header from "./components/Header";
 import Login from "./components/Login";
 
 function App() {
   return (
     <Router>
-      <>
-        <Header />
-        <Login />
-      </>
+      <div className='sticky-top navBar text-dark'>
+        <h1>Friends</h1>
+        <ul className='links'>
+          <li className='p-2'>
+            <Link to='/login'>Login</Link>
+          </li>
+          <li className='p-2'>
+            <Link to='/addFriend'>Add Friend</Link>
+          </li>
+        </ul>
+      </div>
+      <Switch>
+        <Route path='/login' component={Login} />
+        <Route component={Login} />
+      </Switch>
     </Router>
   );
 }
