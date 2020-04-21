@@ -22,9 +22,10 @@ export default function Login(props) {
     axiosWithAuth()
       .post("/api/login", credentials)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         localStorage.setItem("token", result.data.payload);
-        props.history.pushState("/protected");
+        console.log(props);
+        props.history.push("/protected");
       })
       .catch((error) => {
         console.log(error);
